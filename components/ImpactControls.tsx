@@ -31,13 +31,16 @@ export default function ImpactControls({ diameter, setDiameter, density, setDens
                 <p>Thermal Radiation Radius: {impactData.thermalRadius.toFixed(2)} km</p>
             </div>
 
-            <div className='flex justify-around'>
-                <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no/issues" data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-icon="octicon-issue-opened" data-size="large" aria-label="Issue buttons/github-buttons on GitHub">Issue</GitHubButton>
-                <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no" data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-icon="octicon-star" data-size="large" aria-label="Star buttons/github-buttons on GitHub">Star</GitHubButton>
-                <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no" data-color-scheme="no-preference: light; light: light; dark: dark;"
-                    data-icon="octicon-heart" data-size="large" aria-label="Sponsor @buttons on GitHub">Sponsor</GitHubButton>
+            <div>
+                <h1 className='text-center'>Contribute to this project on GitHub:</h1>
+                <div className='flex justify-around pt-1'>
+                    <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no/issues" data-color-scheme="no-preference: light; light: light; dark: dark;"
+                        data-icon="octicon-issue-opened" data-size="large" aria-label="Issue buttons/github-buttons on GitHub">Issue</GitHubButton>
+                    <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no" data-color-scheme="no-preference: light; light: light; dark: dark;"
+                        data-icon="octicon-star" data-size="large" aria-label="Star buttons/github-buttons on GitHub">Star</GitHubButton>
+                    <GitHubButton href="https://github.com/miljkovicjovan/asteroid-oh-no" data-color-scheme="no-preference: light; light: light; dark: dark;"
+                        data-icon="octicon-heart" data-size="large" aria-label="Sponsor @buttons on GitHub">Sponsor</GitHubButton>
+                </div>
             </div>
         </div >
     );
