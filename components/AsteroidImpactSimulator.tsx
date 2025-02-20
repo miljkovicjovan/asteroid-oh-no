@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Circle, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import 'leaflet-defaulticon-compatibility';
 
 interface LatLng {
     lat: number;
@@ -22,11 +24,15 @@ export default function AsteroidImpactSimulator() {
 
     return (
         <div className="h-screen w-full">
-            <h1 className="text-center text-2xl font-bold p-4">Asteroid Impact Simulator</h1>
+            <div className="p-4 flex flex-col gap-2">
+                <h1 className="text-center text-2xl font-bold">Asteroid Oh No</h1>
+                <p className="text-center text-xs text-gray-400">app still isn&#39;t correctly calculating data, being developed...</p>
+            </div>
             <MapContainer
                 center={[impactLocation.lat, impactLocation.lng]}
                 zoom={5}
                 style={{ height: "80vh", width: "100%" }}
+                attributionControl={false}
             >
                 <MapClickHandler setImpactLocation={setImpactLocation} />
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

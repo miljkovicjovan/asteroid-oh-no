@@ -1,10 +1,16 @@
 "use client";
-import AsteroidImpactSimulator from "./components/AsteroidImpactSimulator";
+
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/AsteroidImpactSimulator"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (
     <div>
-      <AsteroidImpactSimulator />
+      <Map />
     </div>
   );
 }
